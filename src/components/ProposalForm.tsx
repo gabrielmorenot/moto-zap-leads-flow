@@ -49,9 +49,8 @@ const ProposalForm = () => {
     
     toast.success(`Redirecionando para ${phoneLabels[randomIndex]}`);
     
-    setTimeout(() => {
-      window.open(`https://wa.me/${selectedPhone}?text=${message}`, "_blank");
-    }, 500);
+    // Use direct location change to avoid popup blockers
+    window.location.href = `https://wa.me/${selectedPhone}?text=${message}`;
   };
 
   return (

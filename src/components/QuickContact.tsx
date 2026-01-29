@@ -9,7 +9,7 @@ const QuickContact = () => {
 
   const handleClick = (phone: string) => {
     const message = encodeURIComponent("Olá! Gostaria de informações sobre motos disponíveis.");
-    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+    window.location.href = `https://wa.me/${phone}?text=${message}`;
   };
 
   return (
