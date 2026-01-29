@@ -1,4 +1,5 @@
 import { MessageCircle } from "lucide-react";
+import logo from "@/assets/logo-carlos-motos.png";
 
 const Header = () => {
   const handleWhatsAppClick = () => {
@@ -11,14 +12,7 @@ const Header = () => {
   return (
     <header className="absolute top-0 left-0 right-0 z-50 py-4 px-4 md:px-8">
       <div className="container mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-            <span className="font-display text-2xl text-primary-foreground">M</span>
-          </div>
-          <span className="font-display text-2xl md:text-3xl text-foreground tracking-wider">
-            MOTO<span className="text-primary">SHOP</span>
-          </span>
-        </div>
+        <img src={logo} alt="Carlos das Motos" className="h-12 md:h-16 w-auto" />
         
         <button
           onClick={handleWhatsAppClick}
