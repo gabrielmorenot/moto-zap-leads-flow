@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header className="absolute top-0 left-0 right-0 z-50 py-4 px-4 md:px-8">
       <div className="container mx-auto flex items-center justify-between">
-        <img src={logo} alt="Carlos das Motos" className="h-12 md:h-16 w-auto" />
+        <img src={logo} alt="Carlos das Motos" className="h-14 md:h-20 w-auto" />
         
         <button
           onClick={handleWhatsAppClick}
