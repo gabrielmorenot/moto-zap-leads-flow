@@ -23,8 +23,9 @@ const LocationSection = () => {
               <div>
                 <h3 className="font-semibold text-foreground mb-1">Endereço</h3>
                 <p className="text-muted-foreground text-sm">
-                  Av. Principal, 1234<br />
-                  Centro - São Luís, MA
+                  Avenida Guajajaras, 48<br />
+                  Jardim São Cristóvão<br />
+                  São Luís - MA, 65.055-285
                 </p>
               </div>
             </div>
@@ -43,7 +44,7 @@ const LocationSection = () => {
             </div>
             
             <a
-              href="https://www.google.com/maps"
+              href="https://www.google.com/maps/search/?api=1&query=Avenida+Guajajaras+48+Jardim+São+Cristóvão+São+Luís+MA"
               target="_blank"
               rel="noopener noreferrer"
               className="card-glass p-6 flex items-center gap-4 hover:border-primary transition-colors group"
@@ -64,14 +65,14 @@ const LocationSection = () => {
           <div className="lg:col-span-2">
             <div className="card-glass overflow-hidden h-full min-h-[400px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127428.24037017827!2d-44.35091384179688!3d-2.5295374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f68da24f252a5d%3A0xb8e6e0986ab8e633!2sS%C3%A3o%20Lu%C3%ADs%2C%20MA!5e0!3m2!1spt-BR!2sbr!4v1706547892345!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.9!2d-44.27!3d-2.53!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zAvenida+Guajajaras,+48+-+Jardim+São+Cristóvão,+São+Luís+-+MA!5e0!3m2!1spt-BR!2sbr"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: "400px" }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Localização da loja"
+                title="Localização Carlos das Motos - Av. Guajajaras, 48"
               />
             </div>
           </div>
