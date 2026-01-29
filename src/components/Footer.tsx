@@ -1,4 +1,5 @@
 import { Heart } from "lucide-react";
+import logo from "@/assets/logo-carlos-motos.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,21 +9,14 @@ const Footer = () => {
       <div className="container mx-auto max-w-4xl">
         <div className="flex flex-col items-center gap-6">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="font-display text-xl text-primary-foreground">M</span>
-            </div>
-            <span className="font-display text-2xl text-foreground tracking-wider">
-              MOTO<span className="text-primary">SHOP</span>
-            </span>
-          </div>
+          <img src={logo} alt="Carlos das Motos" className="h-14 w-auto" />
           
           {/* Divider */}
           <div className="w-20 h-px bg-border" />
           
           {/* Copyright */}
           <p className="text-muted-foreground text-sm text-center flex items-center gap-1">
-            © {currentYear} MotoShop. Todos os direitos reservados.
+            © {currentYear} Carlos das Motos. Todos os direitos reservados.
           </p>
           
           <p className="text-muted-foreground/60 text-xs flex items-center gap-1">
