@@ -6,7 +6,7 @@ const Header = () => {
     const phones = ["5598991558294", "5598984175552", "5598985949585"];
     const randomPhone = phones[Math.floor(Math.random() * phones.length)];
     const message = encodeURIComponent("Olá! Tenho interesse em uma moto. Gostaria de mais informações.");
-    window.open(`https://wa.me/${randomPhone}?text=${message}`, "_blank");
+    window.location.href = `https://wa.me/${randomPhone}?text=${message}`;
   };
 
   return (
