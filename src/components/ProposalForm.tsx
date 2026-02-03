@@ -3,8 +3,9 @@ import { Send, User, Phone, Bike } from "lucide-react";
 import { toast } from "sonner";
 
 const ProposalForm = () => {
-  const [formData, setFormData] = useState({
+const [formData, setFormData] = useState({
     nome: "",
+    cpf: "",
     whatsapp: "",
     moto: "",
   });
@@ -15,7 +16,7 @@ const ProposalForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.nome.trim() || !formData.whatsapp.trim() || !formData.moto.trim()) {
+    if (!formData.nome.trim() || !formData.cpf.trim() || !formData.whatsapp.trim() || !formData.moto.trim()) {
       toast.error("Por favor, preencha todos os campos");
       return;
     }
@@ -23,6 +24,13 @@ const ProposalForm = () => {
     // Validate name length
     if (formData.nome.length > 100) {
       toast.error("Nome muito longo");
+      return;
+    }
+
+    // Validate CPF format (basic - 11 digits)
+    const cpfClean = formData.cpf.replace(/\D/g, "");
+    if (cpfClean.length !== 11) {
+      toast.error("CPF inválido - deve conter 11 dígitos");
       return;
     }
 
@@ -44,7 +52,7 @@ const ProposalForm = () => {
     const selectedPhone = phones[randomIndex];
     
     const message = encodeURIComponent(
-      `Olá! Me chamo ${formData.nome.trim()}.\n\nMeu WhatsApp: ${formData.whatsapp.trim()}\n\nTenho interesse na moto: ${formData.moto.trim()}\n\nGostaria de receber uma proposta!`
+      `Olá! Me chamo ${formData.nome.trim()}.\n\nCPF: ${formData.cpf.trim()}\n\nMeu WhatsApp: ${formData.whatsapp.trim()}\n\nTenho interesse na moto: ${formData.moto.trim()}\n\nGostaria de receber uma proposta!`
     );
     
     toast.success(`Redirecionando para ${phoneLabels[randomIndex]}`);
@@ -78,6 +86,21 @@ const ProposalForm = () => {
               value={formData.nome}
               onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
               maxLength={100}
+            />
+          </div>
+          
+          <div className="space-y-2">
+            <label className="flex items-center gap-2 text-sm font-medium text-foreground">
+              <User className="w-4 h-4 text-primary" />
+              CPF para simulação bancária
+            </label>
+            <input
+              type="text"
+              placeholder="Coloque aqui o seu CPF"
+              className="input-modern"
+              value={formData.cpf}
+              onChange={(e) => setFormData({ ...formData, cpf: e.target.value })}
+              maxLength={14}
             />
           </div>
           

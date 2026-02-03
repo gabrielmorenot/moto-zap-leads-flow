@@ -4,7 +4,6 @@ const QuickContact = () => {
   const contacts = [
     { phone: "5598991558294", label: "(98) 99155-8294", name: "Vendedor 1" },
     { phone: "5598984175552", label: "(98) 98417-5552", name: "Vendedor 2" },
-    { phone: "5598985949585", label: "(98) 98594-9585", name: "Vendedor 3" },
   ];
 
   const handleClick = (phone: string) => {
@@ -24,7 +23,7 @@ const QuickContact = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {contacts.map((contact, index) => (
             <button
               key={index}

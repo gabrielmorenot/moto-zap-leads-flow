@@ -65,7 +65,7 @@ const LocationSection = () => {
           <div className="lg:col-span-2">
             <div className="card-glass overflow-hidden h-full min-h-[400px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.9!2d-44.27!3d-2.53!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zAvenida+Guajajaras,+48+-+Jardim+São+Cristóvão,+São+Luís+-+MA!5e0!3m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.9!2d-44.2246943!3d-2.5591356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f69112e1e6f7d1%3A0xc2701d2ea7117257!2sCarlos%20das%20Motos%20Guajajaras!5e0!3m2!1spt-BR!2sbr!4v1706800000000!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: "400px" }}
